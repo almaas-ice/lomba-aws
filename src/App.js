@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import Home from './page/home'
+import VisiMisi from './page/visi misi'
+import Struktur from './page/struktur'
+import Galeri from './page/galeri'
+import Footer from './components/footer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Switch>
+      <Route exact path='/' component={Home}/>
+
+      <Route path='/visi-misi' component={VisiMisi}/>
+      <Route path='/struktur-organisasi' component={Struktur}/>
+      <Route path='/galeri' component={Galeri}/>
+
+      <Route exact path='/our-events'><Redirect to='/'/></Route>
+      <Route exact path='/our-events/:slug'>our events</Route>
+
+      <Route exact path='/e-magazine'>e magazine</Route>
+
+      <Route path='/:slug'>About</Route>
+    </Switch>
+    <Footer />
+    </BrowserRouter>
   );
 }
 
