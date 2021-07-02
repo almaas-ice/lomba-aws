@@ -52,15 +52,16 @@ const Tile = styled(Link)`
   &:nth-of-type(1) {
     background: #c69401;
     color: #ffffff;
-    transform: translateX(-36px);
+    transform: translateX(-48px);
   }
   &:nth-of-type(2) {
     background: #000000;
     color: #ffffff;
   }
   &:nth-of-type(3) {
+    background: #f4f4f4;
     color: #4d4d4d;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
 `
 export const aboutList = [

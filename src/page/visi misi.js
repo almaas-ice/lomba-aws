@@ -3,6 +3,8 @@ import {
   Grid,
   Row,
   Column,
+  UnorderedList,
+  ListItem
 } from 'carbon-components-react'
 import {HeaderSecondary} from '../components/header'
 import {Pagination} from '../parts/pagination'
@@ -24,27 +26,27 @@ function VisiMisi() {
     <HeaderSecondary title="Visi Misi" />
     <Section>
       <Grid>
-        <Row>
-          <Column sm={4} md={3} lg={}>
-            <h2>Visi</h2>
+        <Row style={{marginBottom:48}}>
+          <Column sm={4} md={3} lg={3}>
+            <h3>Visi</h3>
           </Column>
-          <Column sm={4} md={5} lg={}>
+          <Column sm={4} md={5} lg={6}>
             <p>
             {data.visi}
             </p>
           </Column>
         </Row>
 
-        <Row>
-          <Column sm={4} md={3} lg={}>
-          <h2>Misi</h2>
+        <Row style={{marginBottom:48}}>
+          <Column sm={4} md={3} lg={3}>
+          <h3>Misi</h3>
           </Column>
-          <Column sm={4} md={3} lg={}>
-            <ol>
+          <Column sm={4} md={3} lg={6}>
+            <UnorderedList>
             {data.misi.map((value,i)=>(
-            <li key={i}>{value}</li>
+            <ListItem key={i}><p>{value}</p></ListItem>
             ))}
-            </ol>
+            </UnorderedList>
           </Column>
         </Row>
       </Grid>

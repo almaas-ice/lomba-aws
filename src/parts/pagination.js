@@ -5,6 +5,7 @@ import {
   Column,
   ClickableTile
 } from 'carbon-components-react'
+import {Link as A} from 'react-router-dom'
 import {aboutList} from '../components/about us'
 
 function getTileContent(i) {
@@ -16,6 +17,10 @@ function getTileContent(i) {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+` 
+const Link = styled(A)`
+  display: block;
+  width: 100%;
 `
 export function Pagination(props) {
   const next = getTileContent(props.next)
@@ -26,19 +31,23 @@ export function Pagination(props) {
       <Grid>
         <Row>
           <Column sm={4} md={{span:5,offset:3}} lg={{span:5,offset:7}}>
-            <Wraper>
-
-            <ClickableTile href={`/${prev.slug}`}>
+            <Wrapper>
+            
+            <Link to={`/${prev.slug}`}>
+            <ClickableTile >
               {prev.icon}
               <p>{prev.title}</p>
             </ClickableTile>
+            </Link>
 
-            <ClickableTile href={`/${next.slug}`}>
+            <Link to={`/${next.slug}`}>
+            <ClickableTile>
               {next.icon}
               <p>{next.title}</p>
             </ClickableTile>
+            </Link>
 
-            </Wraper>
+            </Wrapper>
           </Column>
         </Row>
       </Grid>

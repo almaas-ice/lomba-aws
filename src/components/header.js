@@ -59,6 +59,7 @@ export function Header() {
 }
 
 export function HeaderSecondary(props) {
+  return(
   <Container secondary>
     <Pattern />
     <Grid>
@@ -70,6 +71,7 @@ export function HeaderSecondary(props) {
       </Row>
     </Grid>
   </Container>
+  )
 }
 
 const PatternWrap = styled.div`
