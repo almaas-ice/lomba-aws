@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 const Link = styled(A)`
   display: block;
   width: 100%;
+  text-decoration: none;
 `
 export function Pagination(props) {
   const next = getTileContent(props.next)

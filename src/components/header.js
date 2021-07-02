@@ -47,7 +47,7 @@ export function Header() {
               renderIcon={ChevronRight16}
               iconDescription="Discover"
               kind="secondary" 
-              href="#"
+              href="#about"
             >Discover</Button>
           </Column>
         </Row>

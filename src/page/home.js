@@ -1,8 +1,7 @@
 import {Header} from '../components/header'
 import {AboutUs} from '../components/about us'
 import {OurEvents} from '../components/our events'
-//Location
-//Footer
+import {Location} from '../components/location'
 
 function Home() {
   return(
@@ -10,6 +9,7 @@ function Home() {
     <Header />
     <AboutUs />
     <OurEvents />
+    <Location />
     </>
   )
 }

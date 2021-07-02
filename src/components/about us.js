@@ -15,7 +15,7 @@ import {
 
 export function AboutUs() {
   return(
-  <Section>
+  <Section id='about'>
     <Grid>
       <Row>
         <Column sm={4} md={4} lg={5}>

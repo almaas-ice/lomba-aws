@@ -54,7 +54,7 @@ export function CardDesc(props) {
       <p>{props.desc}</p>
       </Desc>
 
-      <Link to={`our-events/${props.slug}`}>
+      <Link to={`our-events/${props.slug}`} style={{textDecoration:'none'}}>
         <TextLink>
         Baca Selengkapnya
         </TextLink>

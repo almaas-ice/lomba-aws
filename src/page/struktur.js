@@ -3,8 +3,14 @@ import {
   Grid,
   Row,
   Column,
+  UnorderedList,
+  ListItem,
+  Accordion,
+  AccordionItem
 } from 'carbon-components-react'
 import {HeaderSecondary} from '../components/header'
+import {Pagination} from '../parts/pagination'
+import {dataStruktur as data} from '../adapter/data-struktur'
 
 function Struktur() {
   return(
@@ -13,12 +19,42 @@ function Struktur() {
     <Section>
       <Grid>
         <Row>
-          <Column>
+          <Column sm={4} md={{span:6,offset:1}} lg={{span:8,offset:2}}>
+
+            <h5>{data.periode}</h5>
+            <UnorderedList style={{marginBottom:24}}>
+              <ListItem><p>Ketua Umum: {data.ketua}</p></ListItem>
+              <ListItem><p>Sekretaris Umum: {data.sekretaris1}</p></ListItem>
+              <ListItem><p>Sekretaris Umum: {data.sekretaris2}</p></ListItem>
+              <ListItem><p>Bendahara Umum: {data.bendahara1}</p></ListItem>
+              <ListItem><p>Bendahara Umum: {data.bendahara2}</p></ListItem>
+            </UnorderedList>
           
+            <Accordion>
+            {data.bidang.map((bidang,i)=>(
+              <AccordionItem title={bidang.nama} key={i}>
+                <UnorderedList>
+                <ListItem><p>Ketua: {bidang.ketua}</p></ListItem>
+                <ListItem><p>Sekretaris: {bidang.sekretaris}</p></ListItem>
+                <ListItem><p>Bendahara: {bidang.bendahara}</p></ListItem>
+                <ListItem><p>anggota:</p></ListItem>
+                <ListItem>
+                  <UnorderedList nested>
+                    {bidang.anggota.map((anggota,i)=>(
+                    <ListItem key={i}><p>{anggota}</p></ListItem>
+                    ))}
+                  </UnorderedList>
+                </ListItem>
+                </UnorderedList>
+              </AccordionItem>
+            ))}
+            </Accordion>
+
           </Column>
         </Row>
       </Grid>
     </Section>
+    <Pagination prev={1} next={3}/>
     </>
   )
 }

@@ -1,10 +1,17 @@
+import gbsImg from '../assets/photo/gbs1.jpg'
+import youthImg from '../assets/photo/youth1.jpg'
+import psImg from '../assets/photo/publicspeaking1.jpg'
+
+import gbsIll from '../assets/illustration/illgbs.png'
+import youthIll from '../assets/illustration/illyouth.png'
+import psIll from '../assets/illustration/illpublicspeaking.png'
 
 export const dataEvents = [
   {
     title: 'Gebyar Bakat Santri',
     slug: 'gebyar-bakat-santri',
-    image: '',
-    illustration: '',
+    image: gbsImg,
+    illustration: gbsIll,
     desc: 'Berada di era persaingan global saat ini, menuntut siapa saja agar memiliki...',
     content: `
       <p>Berada di era persaingan global saat ini, menuntut siapa saja agar memiliki kompetensi di bidang lifeskill maupun intelektual yang mumpuni tanpa dibatasi oleh ruang dan waktu. Proses pembelajaran dan keterampilan lifeskill yang diasah sejak dini telah menumbuhkan kecerdasan dan berbagai macam kreativitas. Terbentuknya pondok pesantren sebagai wadah utama pembinaan kader umat islam pun tak terlepas dari tuntutan perkembangan zaman tersebut, karena yang termindset ialah kecakapan santri yang mencakup hanya dalam ranah keagamaan saja yang dirasa kurang mengena untuk masyarakat luas pada umumnya</p>
@@ -16,8 +23,8 @@ export const dataEvents = [
   {
     title: `Youth: Nation's Next Generation`,
     slug: 'youth-nations-next-generation',
-    image: '',
-    illustration: '',
+    image: youthImg,
+    illustration: youthIll,
     desc: 'Banyak sekali pemuda-pemuda Indonesia sekarang ini tidak mengetahui kemana arah...',
     content: `
       <p>Banyak sekali pemuda-pemuda Indonesia sekarang ini tidak mengetahui kemana arah hidup mereka di masa yang akan datang. Mereka pun masih bingung akan cita-cita dan harapan hidup mereka. Itulah letak permasalahan yang terjadi pada generasi muda ini. Dan karena itulah IPM bagian Pengkajian Ilmu Pengetahuan menyelenggarakan Seminar Kepemudaan dengan judul "YOUTH: NATION'S NEXT GENERATION" bersama kak Sherly Annavita pada hari jum'at, 31 Januari 2020 pagi hari</p>
@@ -29,8 +36,8 @@ export const dataEvents = [
   {
     title: 'Public Speaking',
     slug: 'public-speaking',
-    image: '',
-    illustration: '',
+    image: psImg,
+    illustration: psIll,
     desc: 'Public Speaking adalah salah satu dari sekian banyak  acara yang dilaksanakan...',
     content: `
       <p>Public Speaking adalah salah satu dari sekian banyak  acara yang dilaksanakan oleh PR IPM MBS yang bertujuan untuk mengembangkan kemampuan mengolah kata dan kepercayaan diri santri dalam berpidato dan orasi didepan khalayak ramai.Acara ini dihadiri oleh seluruh santri kelas 7 hingga kelas 12.Para asatidz pun turut andil dalam memeriahkan pada acara yang spesial ini.</p>
