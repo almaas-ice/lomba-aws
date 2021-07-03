@@ -16,7 +16,7 @@ const Container = styled.div`
   height: ${window.innerHeight}px;
   background-image: url(${headerImg});
   background-repeat: no-repeat;
-  background-position-y: ${({offset})=>offset/3}px;
+  background-position-y: ${({offset})=>offset}px;
   background-size: cover;
   ${p=>p.secondary && `
   height: ${window.innerHeight*0.65}px;
@@ -36,7 +36,7 @@ const Desc = styled.p`
 function useParallax() {
   const [offset,setOffset] = useState(0)
   useEffect(()=>{
-    window.addEventListener('scroll',()=>setOffset(()=>window.pageYOffset))
+    window.addEventListener('scroll',()=>setOffset(()=>Math.round(window.pageYOffset/3)))
   },[])
   return offset;
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 import {Link} from 'react-router-dom'
 import {Section} from '../parts/section'
 import {
@@ -19,14 +20,18 @@ export function AboutUs() {
     <Grid>
       <Row>
         <Column sm={4} md={4} lg={5}>
-          <h3 style={{marginBottom:36}}>Tentang Kami</h3>
+        <Fade bottom>
+          <h3>Tentang Kami</h3>
           <p style={{marginBottom:48}}>
             Ikatan Pelajar Muhammadiyah adalah organisasi otonom Muhammadiyah yang merupakan gerakan islam, dakwah amar ma'ruf nahi munkar di kalangan pelajar, Berakidah islam dan bersumber pada Al-Quran dan As-Sunnah.
           </p>
+        </Fade>
         </Column>
 
         <Column sm={4} md={4} lg={{span:6,offset:1}}>
+        <Fade bottom>
           <Tiles />
+        </Fade>
         </Column>
       </Row>
     </Grid>
