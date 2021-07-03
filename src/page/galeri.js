@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {Section} from '../parts/section'
 import {
   Grid,
@@ -9,23 +10,27 @@ import {Pagination} from '../parts/pagination'
 import {dataGaleri} from '../adapter/data-galeri'
 
 function Galeri() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+
   return(
     <>
     <HeaderSecondary title="Galeri" />
     <Section>
       <Grid>
         <Row>
-          <Column sm={4} md={4} lg={4}>
+          
           {dataGaleri.map((image,i)=>(
-            <div>
+            <Column sm={4} md={4} lg={4} style={{marginBottom:24}}>
               <img 
               src={image} 
               alt={`gambar ${i}`} 
               key={i}
               />
-            </div>
+            </Column>
           ))}
-          </Column>
+          
         </Row>
       </Grid>
     </Section>

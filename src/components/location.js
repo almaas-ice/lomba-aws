@@ -11,13 +11,14 @@ export function Location() {
       <Grid>
         <Row>
           <Column sm={4} md={0} lg={0}>
-            <h3>Location</h3>
+            <h3>Lokasi</h3>
           </Column>
           <Column sm={4} md={5} lg={6}>
             <div style={{width:"100%"}}>
-            <iframe 
+            <iframe
+              title='lokasi mbs' 
               width="100%" 
-              height="600" 
+              height="500" 
               frameborder="0" 
               scrolling="no" 
               marginheight="0" 

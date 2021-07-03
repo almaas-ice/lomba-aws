@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {Section} from '../parts/section'
 import {
   Grid,
@@ -13,6 +14,10 @@ import {Pagination} from '../parts/pagination'
 import {dataStruktur as data} from '../adapter/data-struktur'
 
 function Struktur() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+
   return(
     <>
     <HeaderSecondary title="Struktur Organisasi" />
@@ -24,10 +29,10 @@ function Struktur() {
             <h5>{data.periode}</h5>
             <UnorderedList style={{marginBottom:24}}>
               <ListItem><p>Ketua Umum: {data.ketua}</p></ListItem>
-              <ListItem><p>Sekretaris Umum: {data.sekretaris1}</p></ListItem>
-              <ListItem><p>Sekretaris Umum: {data.sekretaris2}</p></ListItem>
-              <ListItem><p>Bendahara Umum: {data.bendahara1}</p></ListItem>
-              <ListItem><p>Bendahara Umum: {data.bendahara2}</p></ListItem>
+              <ListItem><p>Sekretaris Umum 1: {data.sekretaris1}</p></ListItem>
+              <ListItem><p>Sekretaris Umum 2: {data.sekretaris2}</p></ListItem>
+              <ListItem><p>Bendahara Umum 1: {data.bendahara1}</p></ListItem>
+              <ListItem><p>Bendahara Umum 2: {data.bendahara2}</p></ListItem>
             </UnorderedList>
           
             <Accordion>
@@ -37,8 +42,7 @@ function Struktur() {
                 <ListItem><p>Ketua: {bidang.ketua}</p></ListItem>
                 <ListItem><p>Sekretaris: {bidang.sekretaris}</p></ListItem>
                 <ListItem><p>Bendahara: {bidang.bendahara}</p></ListItem>
-                <ListItem><p>anggota:</p></ListItem>
-                <ListItem>
+                <ListItem><p>anggota:</p>
                   <UnorderedList nested>
                     {bidang.anggota.map((anggota,i)=>(
                     <ListItem key={i}><p>{anggota}</p></ListItem>

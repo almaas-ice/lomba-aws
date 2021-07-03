@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import styled from 'styled-components'
 import {useLocation} from 'react-router-dom'
 import {Section} from '../parts/section'
@@ -23,12 +24,16 @@ const Wrapper = styled.div`
     width: 100%;
   }
   p,img {
-    margin-bottom: 16px;
+    margin-top: 16px;
   }
 `
 function EventPage() {
   const {pathname} = useLocation()
   const {title,image,content} = getContent(pathname)
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   return(
     <Section>

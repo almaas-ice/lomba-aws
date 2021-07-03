@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import styled from 'styled-components'
 import {Section} from '../parts/section'
 import {
@@ -13,8 +14,12 @@ const Iframe = styled.iframe`
   padding: 0;
 `
 function Magazine() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+
   return(
-    <Section>
+    <Section bottom={0}>
       <Grid>
         <Row>
           <Column>

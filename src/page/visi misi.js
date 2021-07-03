@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {Section} from '../parts/section'
 import {
   Grid,
@@ -11,6 +12,10 @@ import {Pagination} from '../parts/pagination'
 
 
 function VisiMisi() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+
   const data = {
     visi: 'Terwujudnya pelajar muslim yang berilmu, berakhlak mulia, dan terampil dalam rangka menegakkan dan menjunjung tinggi nilai-nilai islam sehinggaterwujud masyarakat islam yang sebenar-benarnya',
     misi: [

@@ -3,15 +3,16 @@ import {Link} from 'react-router-dom'
 
 const wrapperStyle = `
   width: 100%;
-  height: 180px;
+  height: 220px;
 `
 const ImgWrapper = styled.div`
   ${wrapperStyle}
   position: relative;
+  overflow: hidden;
+  align-items: center;
 `
 const Illustration = styled.img`
   width: 100%;
-  height: 100%;
 `
 const Img = styled(Illustration)`
   width: 15%;
@@ -39,7 +40,7 @@ const TextLink = styled.p`
 export function CardImg(props) {
   return (
   <ImgWrapper>
-    <Illustration src={props.Illustration} alt={props.alt}/>
+    <Illustration src={props.illustration} alt={props.alt}/>
     <Img src={props.image} alt={props.alt} />
   </ImgWrapper>
   )

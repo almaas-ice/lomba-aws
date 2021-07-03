@@ -26,10 +26,10 @@ function Footer() {
           <Column sm={4} md={8} lg={3}>
             <h3>Media Sosial</h3>
           </Column>
-          <Column sm={4} md={8} lg={4}>
-            <Link href='https://www.instagram.com/ipmmbsputrayk'><p>Instagram</p></Link>
-            <Link href='https://youtube.com/c/PRIPMMBSYOGYAKARTA'><p>Youtube</p></Link>
-            <Link href='https://my.ipm.or.id/user/pripmppmmbsputraslemanyogyakarta'><p>My Ipm</p></Link>
+          <Column sm={4} md={8} lg={4} style={{marginBottom:36}}>
+            <Link href='https://www.instagram.com/ipmmbsputrayk' target='_blank'><p>Instagram</p></Link>
+            <Link href='https://youtube.com/c/PRIPMMBSYOGYAKARTA' target='_blank'><p>Youtube</p></Link>
+            <Link href='https://my.ipm.or.id/user/pripmppmmbsputraslemanyogyakarta' target='_blank'><p>My Ipm</p></Link>
           </Column>
           <Column sm={4} md={8} lg={5}>
             <p>
