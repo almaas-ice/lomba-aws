@@ -9,16 +9,16 @@ import {
 
 export function OurEvents() {
   return (
-    <Section top={0}>
+    <Section top={48}>
     <Grid>
       <Row>
         <Column sm={4} md={8} lg={3}>
-          <h3 style={{marginBottom:36}}>Our Events</h3>
+          <h3>Our Events</h3>
         </Column>
       </Row>
 
-      {dataEvents.map(event=>(
-        <Row>
+      {dataEvents.map((event,i)=>(
+        <Row key={i}>
           <Column sm={4} md={4} lg={{span:4,offset:3}}>
             <CardImg
               image={event.image}

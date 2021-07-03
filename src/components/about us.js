@@ -53,15 +53,24 @@ const Tile = styled(Link)`
     background: #c69401;
     color: #ffffff;
     transform: translateX(-48px);
+    &:hover {
+      background: #8b6801;
+    }
   }
   &:nth-of-type(2) {
     background: #000000;
     color: #ffffff;
+    &:hover {
+      background: #292929;
+    }
   }
   &:nth-of-type(3) {
     background: #f4f4f4;
     color: #4d4d4d;
     transform: translateY(24px);
+    &:hover {
+      background: #d7d7d7;
+    }
   }
 `
 export const aboutList = [

@@ -35,6 +35,9 @@ const Desc = styled.div`
 const TextLink = styled.p`
   color: #c69401;
   text-decoration: none;
+  &:hover {
+    color: #8b6801;
+  }
 `
 
 export function CardImg(props) {

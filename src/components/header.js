@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import styled from 'styled-components'
 import headerImg from '../assets/image/banner.jpg'
 import {ArrowDown16,ChevronRight16} from '@carbon/icons-react'
@@ -16,13 +16,13 @@ const Container = styled.div`
   height: ${window.innerHeight}px;
   background-image: url(${headerImg});
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-y: ${({offset})=>offset/3}px;
   background-size: cover;
   ${p=>p.secondary && `
   height: ${window.innerHeight*0.65}px;
   overflow: hidden;
   `}
-`
+` 
 const white = `color: #ffffff;`
 const Display = styled.h1`
   font-weight: 600;
@@ -33,9 +33,17 @@ const Desc = styled.p`
   margin-bottom: 16px;
   ${white}
 `
+function useParallax() {
+  const [offset,setOffset] = useState(0)
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>setOffset(()=>window.pageYOffset))
+  },[])
+  return offset;
+}
 export function Header() {
+  const offset = useParallax();
   return(
-    <Container>
+    <Container offset={offset}>
       <Pattern />
 
       <Grid>
@@ -59,8 +67,9 @@ export function Header() {
 }
 
 export function HeaderSecondary(props) {
+  const offset = useParallax();
   return(
-  <Container secondary>
+  <Container secondary offset={offset}>
     <Pattern />
     <Grid>
       <Row style={{paddingTop:`${window.innerHeight*0.65*0.38}px`}}>
@@ -134,6 +143,7 @@ const ScrollButton = styled(Button)`
   width: ${p=>p.btnWidth};
   border-left: 8px solid #000000;
   transform: translateY(20px);
+  cursor: default !important;
 `
 function Scroll(props) {
   const [winWidth,setWinWidth] = useState(window.innerWidth)
