@@ -1,3 +1,18 @@
+# Deskripsi Singkat
+
+Website ini merupakan sarana santri untuk memberitahukan kepada dunia tentang organisasi Ikatan Pelajar Muhammadiyah di Pondok Pesantren Muhammadiyah Boarding School Yogyakarta serta kegiatan-kegiatan santriwan yang hidup di pondok tercinta ini
+
+
+teknologi yang digunakan:
+- [React JS](https://reactjs.org)
+- [IBM Carbon Design System](https://www.carbondesignsystem.com/)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+- [React Reveal](https://www.react-reveal.com/)
+- [Sass](https://sass-lang.com/)
+
+.
+___
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
