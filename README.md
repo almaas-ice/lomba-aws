@@ -6,6 +6,7 @@ Website ini merupakan sarana santri untuk memberitahukan kepada dunia tentang or
 teknologi yang digunakan:
 - [React JS](https://reactjs.org)
 - [IBM Carbon Design System](https://www.carbondesignsystem.com/)
+- [Styled Components](https://styled-components.com/)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
 - [React Reveal](https://www.react-reveal.com/)
 - [Sass](https://sass-lang.com/)
